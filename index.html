@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Donation form">
+    <meta name="author" content="A.Walter">
+    <title>SQ_TEST</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&amp;subset=latin-ext" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/87c6a30ce1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
+    <script src="nouislider.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+<!--SEARCHBAR-->
+    <div class="searchbar">
+      <div class="sb-search" id="sb-search">
+         <form class="form-inline">
+            <input class="sb-search-input " onkeyup="buttonUp();" placeholder="Search" onblur="monkey();" type="search" value="" name="search" id="search">
+             <input class="sb-search-submit" type="submit"  value="">
+              <div class="btn btn-red sb-icon-search">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22px" height="23px">
+                  <image  x="0px" y="0px" width="20px" height="20px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAXCAQAAACl4XcVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfhDAkUAi3F8vVXAAABbElEQVQ4y42SzyuEURSGX6MmJmmyE0VTo2aplF8bO0oWVpQF2ZqdtZ2FUsIOCyUpCxaSyD8wWWFjoUaNpNGMmWLBzJjHYs43Pt+Hcc7i3Puep3vvOfcImbexwCUvAHyQZJvBas7cWUxwj9feWSPkh+OU+NmO3bgQYy70ii3WOOe1qmy44TA3JqeZotES3ZxW8ZEveNakDL3fymngzDIn1DnwoUnz3tqJkQcgT9SBb02I+GBxbAeNVvYBtUiSUnqS324sNldCQEVJUkjBH+AmiyUHTkmSOhTzoUH1S5LKSpvCur3rwPfiGcoAJAk7BQ5QNHyJehc6Stb0ZfcP7lTbf8Y4EdrpY5U3025pd8OtXLumIcujXV+xRe8gRUnwm+WY9I5omBUyngEt2KrAdIWq46tVUY1oQJ0KKKcLHalNu9bpkua0KYm/fJhnO/2DODVgMUTa8DLxWrAY5MEZ4tqw6OEOgMR/YBFjnz26PgEQ8F0Y3i6xjQAAAABJRU5ErkJggg==" />
+                </svg>
+              </div>
+          </form>
+        </div>
+      </div>
+    <a class="company_logo" title="logo"><img src="logo.png"  alt="logo"/></a>
+
+    <nav class="navbar navbar-expand-md navbar-light">
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="nav navbar-nav nav-fill">
+          <li><a class="nav-item nav-link" href="#" title="About Us">About Us <span class="sr-only">(current)</span></a></li>
+          <li><a class="nav-item nav-link" href="#" title="Media Centre">Media Centre</a></li>
+          <li><a class="nav-item nav-link" href="#" title="Membershi">Membership</a></li>
+          <li><a class="nav-item nav-link" href="#" title="Events">Events</a></li>
+          <li><a class="nav-item nav-link" href="#" title="Publications">Publications</a></li>
+          <li><a class="nav-item nav-link" href="#" title="Research">Research</a></li>
+        </ul>
+      </div>
+           <a class="nav-item nav-link pull-right" href="#" title="Store" target="_blank"></a>
+         <svg 
+           xmlns="http://www.w3.org/2000/svg"
+           xmlns:xlink="http://www.w3.org/1999/xlink"
+           width="2px" height="39px">
+            <image  x="0px" y="0px" width="2px" height="39px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAnCAQAAACP3lEqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfhDAoQJDqQQ/SGAAAAG0lEQVQI12M48///VyYGBgYuJgYGBoYhSHwDAPbvBQxTz5+jAAAAAElFTkSuQmCC" />
+          </svg>
+          <a href="#" title="shop" target="_blank"><img src="cart.png" alt="shopping cart"></a>
+       
+    </nav>
+<!--SLIDER-->
+  <div class="wrapper">
+      <div class="container">
+        <section class="section_first">
+          <h2 class="text-red">Donate our cause</h2>
+          <p class="value_txt"><span class="amount"> 39$</span> <span id="info">can help us improve this product</span></p>
+          <div id="slider-connect"></div>
+          <span id="value"></span>
+           <div class="form-check mt-3">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input">
+              Yes I would like to donate this amount monthly
+            </label>
+          </div>
+        </section>
+<!--NAME FORM-->
+          <div id="showDiv">
+            <div class="section_second">
+              <form class="cmxform" id="dataForm" method="get">
+                <fieldset>
+                  <legend><span class="number">2</span>&nbsp;Enter your information</legend>
+                  <div class="row">
+                    <div class="col-md-6 col-12">
+                      <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control form-control-lg" id="name" minlength="5" name="name" aria-describedby="name" placeholder="First Last" value='' required>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                      <div class="form-group">
+                        <label for="cemail">Email address</label>
+                        <input type="email" name="email" class="form-control form-control-lg"  id="cemail" aria-describedby="cemail" placeholder="your@email.com" value=''>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 col-12 mt-md-4">
+                      <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" class="form-control form-control-lg" id="address" name="address" placeholder="123 Main St, Apt.2" value='' >
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-12 mt-md-4">
+                      <div class="form-group">
+                        <label for="city">City, State</label>
+                        <input type="text" class="form-control form-control-lg" id="city" name="city" placeholder="Pitsburg,PA" value='' >
+                      </div>
+                    </div>
+                  </div>
+                 <span class="badge badge-pill badge-secondary">Submit</span>
+                 </fieldset>
+              </form>
+            </div>
+          </div>
+<!--CREDIT CARD-->
+          <div class="section_third"  id="showDiv1">
+            <form>
+              <fieldset>
+                <legend><span class="number">3</span>&nbsp;Credit card info</legend>
+                <div class="ccjs-card form-group" id="cc_info" >
+                  <label class="ccjs-number cc_info input">
+                    <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+                  </label>
+                  <input name="card-number" class="ccjs-number form-control form-control-lg" placeholder="1234 5678 9012 3456">
+                  <small id="creditcard" class="form-text text-muted">Please enter your credit card number.</small>
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-md-3 col-6">
+                    <label class="ccjs-csc">
+                      <input name="csc" class="ccjs-csc form-control" placeholder="security code">
+                    </label>
+                    </div>
+                    <div class="col-md-3 col-6">
+                      <label class="ccjs-name">
+                        <input name="name" class="ccjs-name form-control" placeholder="name">
+                      </label>
+                    </div>
+                    <div class="col-md-3 col-6">
+                      <div class="form-group">
+                        <fieldset class="ccjs-expiration form-control">
+                          <select name="month" class="ccjs-month">
+                            <option selected disabled>MM</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                          </select>
+                          <select name="year" class="ccjs-year">
+                            <option selected disabled>YY</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                          </select>
+                        </fieldset>
+                      </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                      <select name="card-type" class="ccjs-hidden-card-type form-control">
+                        <option value="amex" class="ccjs-amex">American Express</option>
+                        <option value="discover" class="ccjs-discover">Discover</option>
+                        <option value="mastercard" class="ccjs-mastercard">MasterCard</option>
+                        <option value="visa" class="ccjs-visa">Visa</option>
+                        <option value="maestro" class="maestro">Maestro</option>
+                        <option value="unionpay" class="unionpay">UnionPay</option>
+                        <option value="visa-electron" class="visa-electron">Visa Electron</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>      
+       <button type="button" class="btn btn-donate" id="showButton" name="answer"><strong>Donate</strong></button>
+      </div>
+    </div>
+<!--FOOTER-->
+    <footer>
+      <div class="social_icons">
+        <a href="https://twitter.com/" title="twitter" target="_blank"> 
+          <img src="twitter.png"  alt="twitter"/>
+        </a>
+        <a href="https://facebook.com/" title="facebook" target="_blank">
+          <img src="facebook.png"  alt="facebook"/>
+        </a>
+        <a href="https://youtube.com/" title="youtube" target="_blank">
+          <img src="youtube.png"  alt="youtube"/>
+        </a>
+        <a href="https://flickr.com/" title="flickr" target="_blank">
+          <img src="flickr.png"  alt="flickr"/>
+        </a>
+        <a href="https://gmail.com/" title="gmail" target="_blank">
+          <img src="email.png"  alt="gmail"/>
+        </a>
+        <a href="https://rss.com/" title="spotify" target="_blank">
+          <img src="rss.png"  alt="rss"/>
+        </a>
+      </div>
+    </footer>
+
+     <div class="site_contact">
+
+      </div>
+
+
+    <script>
+
+      $(document).ready(function(){
+         
+        $("#dataForm").validate({
+            rules: {
+              name: {
+              required: true,
+              minlength: 3,
+              },
+              street: {
+                required: true,
+                minlength: 4
+              },
+              city: {
+                  required: true,
+                  minlength: 4
+              },
+              address: {
+                required: true,
+                minlength: 4
+              }
+            },
+            messages: {
+              address:  "Please enter your street address",
+              city: "Please enter your city and state, separated by a comma"
+              }
+            }
+          );
+      });
+  
+      $('#dataForm input').on('change', function() {
+        $(this).valid();
+        var len = $('#dataForm input').length;
+
+       $('#dataForm input').each(function(){
+        if( $(this).val().length ) len -= 1;
+        console.log('ddddd', len)
+        if(len==0) $('#showDiv1').show('slow');
+       }) 
+       
+      });
+
+
+
+    </script>
+            
+  </body>
+</html>
+
+          
