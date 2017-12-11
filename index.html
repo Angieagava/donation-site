@@ -84,28 +84,36 @@
                   <div class="row">
                     <div class="col-md-6 col-12">
                       <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control form-control-lg" id="name" minlength="5" name="name" aria-describedby="name" placeholder="First Last" value='' required>
+                        <p>
+                          <label for="name">Name</label>
+                          <input type="text" class="form-control form-control-lg" id="name" minlength="5" name="name" aria-describedby="name" placeholder="First Last" value='' required>
+                        </p>
                       </div>
                     </div>
                     <div class="col-md-6 col-12">
                       <div class="form-group">
-                        <label for="cemail">Email address</label>
-                        <input type="email" name="email" class="form-control form-control-lg"  id="cemail" aria-describedby="cemail" placeholder="your@email.com" value=''>
+                        <p>
+                          <label for="cemail">Email address</label>
+                          <input type="email" name="email" class="form-control form-control-lg"  id="cemail" aria-describedby="cemail" placeholder="your@email.com" value=''>
+                        </p>
                       </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-6 col-12 mt-md-4">
                       <div class="form-group">
-                        <label for="address">Address</label>
-                        <input type="text" class="form-control form-control-lg" id="address" name="address" placeholder="123 Main St, Apt.2" value='' >
+                        <p>
+                          <label for="address">Address</label>
+                          <input type="text" class="form-control form-control-lg" id="address" name="address" placeholder="123 Main St, Apt.2" value='' >
+                        </p>
                       </div>
                     </div>
                     <div class="col-md-6 col-12 mt-md-4">
                       <div class="form-group">
-                        <label for="city">City, State</label>
-                        <input type="text" class="form-control form-control-lg" id="city" name="city" placeholder="Pitsburg,PA" value='' >
+                        <p>
+                          <label for="city">City, State</label>
+                          <input type="text" class="form-control form-control-lg" id="city" name="city" placeholder="Pitsburg,PA" value='' >
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -128,17 +136,12 @@
                 </div>
                 <div class="form-group">
                   <div class="row">
-                    <div class="col-md-3 col-6">
-                    <label class="ccjs-csc">
+                    <div class="col-md-4 col-6">
+                    <label class="ccjs-csc w-100">
                       <input name="csc" class="ccjs-csc form-control" placeholder="security code">
                     </label>
                     </div>
-                    <div class="col-md-3 col-6">
-                      <label class="ccjs-name">
-                        <input name="name" class="ccjs-name form-control" placeholder="name">
-                      </label>
-                    </div>
-                    <div class="col-md-3 col-6">
+                    <div class="col-md-4 col-6">
                       <div class="form-group">
                         <fieldset class="ccjs-expiration form-control">
                           <select name="month" class="ccjs-month">
@@ -170,7 +173,7 @@
                         </fieldset>
                       </div>
                     </div>
-                    <div class="col-md-3 col-6">
+                    <div class="col-md-4 col-6">
                       <select name="card-type" class="ccjs-hidden-card-type form-control">
                         <option value="amex" class="ccjs-amex">American Express</option>
                         <option value="discover" class="ccjs-discover">Discover</option>
@@ -217,53 +220,6 @@
 
       </div>
 
-
-    <script>
-
-      $(document).ready(function(){
-         
-        $("#dataForm").validate({
-            rules: {
-              name: {
-              required: true,
-              minlength: 3,
-              },
-              street: {
-                required: true,
-                minlength: 4
-              },
-              city: {
-                  required: true,
-                  minlength: 4
-              },
-              address: {
-                required: true,
-                minlength: 4
-              }
-            },
-            messages: {
-              address:  "Please enter your street address",
-              city: "Please enter your city and state, separated by a comma"
-              }
-            }
-          );
-      });
-  
-      $('#dataForm input').on('change', function() {
-        $(this).valid();
-        var len = $('#dataForm input').length;
-
-       $('#dataForm input').each(function(){
-        if( $(this).val().length ) len -= 1;
-        console.log('ddddd', len)
-        if(len==0) $('#showDiv1').show('slow');
-       }) 
-       
-      });
-
-
-
-    </script>
             
   </body>
 </html>
